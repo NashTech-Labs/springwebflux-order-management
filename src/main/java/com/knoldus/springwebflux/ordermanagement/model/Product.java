@@ -1,4 +1,4 @@
-package com.example.OrderManagement.model;
+package com.knoldus.springwebflux.ordermanagement.model;
 
 public class Product {
 

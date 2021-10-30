@@ -7,28 +7,6 @@ prerequisite:
 ----------------------------------------------------------------------
 Below are the Endpoints:
 
-#Add Product
-#Method: 
-POST
-#URL: 
-http://localhost:9090/addProduct
-#Body:
-{
-"productId":7,
-"item":"user_1",
-"price":101
-}
-
------------------------------------------------------------------------
-
-#Get all the product available
-#Method: 
-GET
-#URL:
-http://localhost:9090/availableProduct
-
------------------------------------------------------------------------
-
 #Get all order
 #Method:
 GET
@@ -37,34 +15,58 @@ http://localhost:9090/allOrder
 
 -----------------------------------------------------------------------
 
-#Create an order
+#Get order by orderId (replace {id} with orderId/UUID)
+#Method:
+GET
+#URL:
+http://localhost:9090/order/{id}
+
+-----------------------------------------------------------------------
+
+#Create a new order
 #Method:
 POST
 #URL:
 http://localhost:9090/createOrder
 #BODY:
-{
-"product" : [{"productId":7,
-"item":"user_1",
-"price":101
+{   
+"customerName" : "Knoldus",
+"customerMobileNo" : "77777777",
+"address" : "India",
+"product" : [{"productId":9,
+"item":"TouchPad",
+"price":500
+},
+{"productId":8,
+"item":"Mouse",
+"price":100
 }]
 }
 
 -----------------------------------------------------------------------
-#update a order
+#update an existing order
 #Method:
 PUT
 #URL:
 http://localhost:9090/update
 #BODY:
-{
-"orderId": "f2b104b3-172f-4ecb-a967-b953bc9e4ff1",
+{"orderId": "e2d485f9-7b1d-4ef0-ac58-82a40650c2a9",
+"orderDate": "2021-10-31T01:14:16.767645387",
+"totalOrderPrice": 220,
 "orderRequest": {
+"customerName": "Knoldus",
+"customerMobileNo": "777777777",
+"address": "India",
 "product": [
 {
 "productId": 7,
-"item": "user_1",
-"price": 101
+"item": "Keyboard",
+"price": 120
+},
+{
+"productId": 8,
+"item": "Mouse",
+"price": 100
 }
 ]
 }
@@ -72,9 +74,9 @@ http://localhost:9090/update
 
 -----------------------------------------------------------------------
 
-#delete a order (replace the UUID with orderid)
+#delete an order (replace {id} in URL with orderid)
 #Method:
 DELETE
 #URL:
-http://localhost:9090/deleteOrder/a79f3da4-30ae-4317-a05e-e469a9eb86d2
+http://localhost:9090/deleteOrder/{id}
 

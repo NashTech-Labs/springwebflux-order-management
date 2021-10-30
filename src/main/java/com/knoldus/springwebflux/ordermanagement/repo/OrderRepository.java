@@ -1,5 +1,6 @@
-package com.example.OrderManagement.model;
+package com.knoldus.springwebflux.ordermanagement.repo;
 
+import com.knoldus.springwebflux.ordermanagement.model.OrderBill;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 
 /**
@@ -7,4 +8,4 @@ import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
  * this Mongo interface have all the required method that we are using to retrive and story the data
  * into db.
  */
-public interface OrderRepository extends ReactiveMongoRepository<OrderResponse, String> {}
+public interface OrderRepository extends ReactiveMongoRepository<OrderBill, String> {}
