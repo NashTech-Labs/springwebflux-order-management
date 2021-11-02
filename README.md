@@ -1,5 +1,4 @@
-# product-management-using-springwebflux
-
+# order-management-using-springwebflux
 
 prerequisite:
 1. MongoDB should be installed in the machine.
@@ -79,4 +78,3 @@ http://localhost:9090/update
 DELETE
 #URL:
 http://localhost:9090/deleteOrder/{id}
-
